@@ -27,6 +27,9 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
 	@Autowired
 	@Qualifier("authenticationManager")
 	private AuthenticationManager authenticationManager;
+	
+	@Autowired
+	private InfoAdditionalToken infoAdditionalToken;
 
 	@Override
 	public void configure(AuthorizationServerSecurityConfigurer security) throws Exception {
@@ -43,9 +46,6 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
 		.accessTokenValiditySeconds(3600)
 		.refreshTokenValiditySeconds(3600);
 	}
-	
-	@Autowired
-	private InfoAdditionalToken infoAdditionalToken;
 
 	@Override
 	public void configure(AuthorizationServerEndpointsConfigurer endpoints) throws Exception {

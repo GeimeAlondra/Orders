@@ -4,6 +4,6 @@ import com.empresa.orders.apirest.models.entities.Usuario;
 
 public interface IUsuarioService {
 	
-	public Usuario findByUserName(String username);
+	public Usuario findByuserName(String username);
 
 }

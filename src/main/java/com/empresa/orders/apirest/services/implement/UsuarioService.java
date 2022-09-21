@@ -49,7 +49,7 @@ public class UsuarioService implements IUsuarioService, UserDetailsService{
 
 	@Override
 	@Transactional(readOnly = true)
-	public Usuario findByUserName(String username) {
+	public Usuario findByuserName(String username) {
 		return usuarioDAO.findByuserName(username);
 	}
 
